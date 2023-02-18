@@ -1,0 +1,5 @@
+Stack: Higher memory to Lower memory
+
+ret address
+ebp address (old)
+arguments (for the present function)
