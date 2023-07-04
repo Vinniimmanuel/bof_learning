@@ -3,3 +3,71 @@ Stack: Higher memory to Lower memory
 ret address
 ebp address (old)
 arguments (for the present function)
+
+registers:
+----------
+	general registers	-- data, pointer, index registers
+	control registers
+	segment registers
+
+
+	data:
+		eax,ebx,ecx,edx
+	pointer:
+		instruction, stack, base
+	index:
+		source, destination
+
+		
+		
+	control:
+		overflow, direction, interrupt, trap, sign, zero, auxiliary, parity, carry		
+
+__arguments__ for the system call stored in : ebx,ecx,edx,esi,edi,ebp
+
+mew times 9 db "#"
+		
+resb, resw, resb, resq
+1,	2,	4,	8
+db, dw, dd, dq
+
+kernel
+stack
+heap
+.bss
+	uninitialized
+.data
+	initialized
+.text
+	progam exection
+
+/mnt/large/learning/buffer_overflow/memory_of_c.png -- refer to it
+
+
+
+high
+----
+rbp -- function args, local var 's
+
+buffer
+
+rsp
+rip
+----
+low
+
+
+gdb-- examine contents- x
+	o 	octal
+	x 	hexadecimal
+	u 	unsigned, base 10
+	t 	binary
+
+	x/o, x/x, x/t, x/u
+
+	b, h, w, g
+	1, 2, 4, 8
+	x/bo, x/hg, x/wt
+
+
+ segment registers: CS, DS, ES, and SS. 
